@@ -164,7 +164,7 @@ a:hover{text-decoration-thickness:2px}
 .copy{border:1px solid var(--accent);color:var(--accent);border-radius:6px;padding:2px 8px;font-size:12px;display:inline-flex;gap:4px;align-items:center}
 .bad{color:var(--warm)}.good{color:var(--ok);font-weight:500;display:inline-flex;gap:4px;align-items:center}
 .tkdiv{text-align:center;color:var(--muted);font-size:11px}
-.n{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;background:var(--warm);color:#fff;font:700 11px var(--mono);margin-left:4px}
+b.n{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;background:var(--warm);color:#fff;font:700 11px var(--mono);margin-left:4px}
 .tklegend{margin:10px 0 0;padding-left:22px;font-size:14px;color:var(--muted);display:grid;gap:3px}
 .tklegend b{color:var(--fg);font-weight:500}
 .steps .tklegend li{display:list-item;padding:0;border:0;grid-template-columns:none;counter-increment:none}
@@ -193,6 +193,8 @@ a:hover{text-decoration-thickness:2px}
 .cctip{justify-self:end;font:12px var(--sans);background:#111;color:#fff;border-radius:6px;padding:4px 10px}
 .ccout{border:1px solid var(--line);border-radius:10px;background:var(--bg);padding:10px 14px;font:12.5px/1.7 var(--mono);color:var(--muted)}
 .ccout .ok{color:#1d7a4f}
+body{word-break:keep-all;overflow-wrap:break-word}
+code,.cmd,.mono,pre,.perm,.permlist code{word-break:break-all}
 </style>
 
 <main>
@@ -233,10 +235,10 @@ a:hover{text-decoration-thickness:2px}
   <div class="tbl"><table>
     <thead><tr><th>#</th><th>무엇</th><th>누가</th><th>언제</th><th>어디서</th></tr></thead>
     <tbody>
-      <tr><td>1</td><td>회사 앱 만들기 · 팀원에게 「앱 테스트」 할당</td><td>관리자</td><td>처음 한 번</td><td><a href="https://developers.facebook.com/apps/" target="_blank" rel="noopener">developers.facebook.com → 내 앱</a> / 비즈니스 설정 → 앱 → 사람 할당</td></tr>
-      <tr><td>2</td><td><span class="nw">메타 계정 인증 · 등록</span></td><td>팀원 각자</td><td>처음 한 번 (3분)</td><td><a href="https://developers.facebook.com" target="_blank" rel="noopener">developers.facebook.com</a> → 「내 앱」</td></tr>
-      <tr><td>3</td><td>토큰(출입증) 받기</td><td>팀원 각자</td><td>60일마다</td><td><a href="https://developers.facebook.com/tools/explorer/" target="_blank" rel="noopener">Graph API 탐색기</a> → 토큰 디버거에서 연장</td></tr>
-      <tr><td>4</td><td>메타 커넥터 연결 (소재 만들기용)</td><td>팀원 각자</td><td>처음 한 번</td><td><a href="https://claude.ai/settings/connectors" target="_blank" rel="noopener">클로드 설정 → 커넥터</a> → 「커스텀 커넥터 추가」 → 주소 <span class="mono">https://mcp.facebook.com/ads</span> (브라우저로 열면 오류처럼 보이는 게 정상)</td></tr>
+      <tr><td>1</td><td>회사 앱 만들기 · 팀원에게 「앱 테스트」 할당</td><td class="nw">관리자</td><td class="nw">처음 한 번</td><td><a href="https://developers.facebook.com/apps/" target="_blank" rel="noopener">developers.facebook.com → 내 앱</a> / 비즈니스 설정 → 앱 → 사람 할당</td></tr>
+      <tr><td>2</td><td><span class="nw">메타 계정 인증 · 등록</span></td><td class="nw">팀원 각자</td><td class="nw">처음 한 번<br>(3분)</td><td><a href="https://developers.facebook.com" target="_blank" rel="noopener">developers.facebook.com</a> → 「내 앱」</td></tr>
+      <tr><td>3</td><td>토큰(출입증) 받기</td><td class="nw">팀원 각자</td><td class="nw">60일마다</td><td><a href="https://developers.facebook.com/tools/explorer/" target="_blank" rel="noopener">Graph API 탐색기</a> → 토큰 디버거에서 연장</td></tr>
+      <tr><td>4</td><td>메타 커넥터 연결 (소재 만들기용)</td><td class="nw">팀원 각자</td><td class="nw">처음 한 번</td><td><a href="https://claude.ai/settings/connectors" target="_blank" rel="noopener">클로드 설정 → 커넥터</a> → 「커스텀 커넥터 추가」 → 주소 <span class="mono">https://mcp.facebook.com/ads</span> (브라우저로 열면 오류처럼 보이는 게 정상)</td></tr>
     </tbody>
   </table></div>
   <figure class="flow-fig">
@@ -322,7 +324,7 @@ a:hover{text-decoration-thickness:2px}
     <li><div><div class="t"><h3>메타 아이디 확인</h3><span class="min">1분</span></div>
       <p>페이스북에 로그인이 되면 OK예요. 없으면 먼저 만들고, 담당 브랜드의 광고계정·페이지 권한을 받아요.</p>
       <p><a class="go" href="https://www.facebook.com" target="_blank" rel="noopener">페이스북 로그인 ↗</a><a class="go" href="https://www.facebook.com/r.php" target="_blank" rel="noopener">아이디 만들기 ↗</a><a class="go" href="https://adsmanager.facebook.com" target="_blank" rel="noopener">광고 관리자 ↗</a></p></div></li>
-    <li><div><div class="t"><h3>클로드 준비</h3><span class="min">10분</span></div>
+    <li><div><div class="t"><h3>클로드 준비</h3><span class="min">3분</span></div>
       <p>클로드 앱 「Code」 탭 → 스킬 설치 → 새 세션(+)</p>
       </div></li>
     <li><div><div class="t"><h3>메타 연결</h3><span class="min">3분</span></div>
